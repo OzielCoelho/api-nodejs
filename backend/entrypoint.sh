@@ -1,6 +1,5 @@
 
 npm i
-# npm run migrate:up -- --env=ci
 
 if [ "$DEBUG" = "true" ]; then
 	npm run dev

@@ -10,4 +10,15 @@ const sequelize = new Sequelize(dbName, dbUser, dbPassword, {
   dialect: "mysql",
 });
 
+export const initializeDatabase = async () => {
+  try {
+    await sequelize.authenticate();
+    console.log("Database connection successful");
+    await sequelize.sync();
+  } catch (error) {
+    console.error("Unable to connect to the database:", error);
+    throw error;
+  }
+};
+
 export default sequelize;

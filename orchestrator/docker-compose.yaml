@@ -16,7 +16,8 @@ services:
       DB_NAME: ${DB_NAME}
       DB_HOST: db
       DB_PASSWORD: ${DB_PASSWORD}
-      DEBUG_PORT: ${DEBUG_PORT}  
+      DEBUG_PORT: ${DEBUG_PORT} 
+      DEBUG: ${DEBUG}  
     entrypoint: [ "sh", "./entrypoint.sh" ]
     healthcheck:
       test:
