@@ -4,9 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node dist/index.js",
-    "dev": "ts-node src/server.ts",
-    "build": "tsc"
+    "tsoa:routes": "tsoa routes",
+    "tsoa:spec": "tsoa spec",
+    "dev": "npm run tsoa:routes && npm run tsoa:spec && ts-node src/server.ts",
+    "build": "npm run tsoa:routes && npm run tsoa:spec && tsc",
+    "start": "node dist/index.js"
   },
   "keywords": [],
   "author": "",
@@ -14,12 +16,15 @@
   "dependencies": {
     "express": "^4.21.0",
     "mysql2": "^3.11.3",
-    "sequelize": "^6.37.3"
+    "sequelize": "^6.37.3",
+    "swagger-ui-express": "^5.0.1",
+    "tsoa": "^6.4.0"
   },
   "devDependencies": {
     "@types/express": "^5.0.0",
     "@types/node": "^22.7.4",
     "@types/sequelize": "^4.28.20",
+    "@types/swagger-ui-express": "^4.1.6",
     "ts-node": "^10.9.2",
     "typescript": "^5.6.2"
   }
