@@ -64,7 +64,7 @@ Executa o servidor a partir dos arquivos JavaScript compilados na pasta dist.
 
 A documentação Swagger está disponível para visualizar todos os endpoints da API:
 
-- `Swagger UI`: http://localhost:3000/api-docs
+- `Swagger UI`: http://localhost:3000/docs
 
 Você pode acessar a documentação e interagir com a API utilizando as rotas /api-docs, /openapi, /docs, ou /swagger.
 
